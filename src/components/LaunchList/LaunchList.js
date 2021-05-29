@@ -34,7 +34,16 @@ const LaunchList = (props) => {
                 <td>{location}</td>
                 <td>{mission_name}</td>
                 <td>{orbit}</td>
-                <td>{status}</td>
+                { 
+                    status == "Failed" &&
+                    <td><span  className="failed">{status}</span></td>
+                    ||
+                    status == "Success" &&
+                    <td><span  className="success">{status}</span></td>
+                    ||
+                    status == "Upcoming" &&
+                    <td><span  className="upcoming">{status}</span></td>
+                }
                 <td>{rocket}</td>
                 
             </tr>
