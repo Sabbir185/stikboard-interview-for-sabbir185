@@ -1,0 +1,9 @@
+.login , .sign-up{
+    width: 400px;
+    background-color: #025389;
+    border-radius: 7px;
+    margin: auto;
+}
+.login form, .sign-up {
+    padding: 30px;
+}

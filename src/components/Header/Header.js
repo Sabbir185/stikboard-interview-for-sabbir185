@@ -1,10 +1,15 @@
 import React from 'react';
+import logo from '../../images/logo.png'
+import './Header.css'
 
 const Header = () => {
+    
     return (
-        <div>
-            <h1>This is header</h1>
-        </div>
+        <header>
+            <div className="logo-container">
+                <img src={logo} alt="logo" className="logo"/>
+            </div>
+        </header>
     );
 };
 

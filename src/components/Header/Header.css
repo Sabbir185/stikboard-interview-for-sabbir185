@@ -1,0 +1,8 @@
+.logo-container {
+    border-bottom: 1px solid lightgrey;
+}
+.logo {
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+}
