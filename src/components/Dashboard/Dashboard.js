@@ -17,9 +17,9 @@ const Dashboard = () => {
         <section className="container">
             <Filter />
 
-            <div className="mt-3">
+            <div className="mt-3 list-container">
                 <Table>
-                    <thead>
+                    <thead className="table-header">
                         <tr>
                             <th>No.</th>
                             <th>Launched(UTC)</th>

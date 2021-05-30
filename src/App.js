@@ -1,16 +1,30 @@
 import './App.css';
-import Dashboard from './components/Dashboard/Dashboard';
-import Header from './components/Header/Header';
-import Login from './components/Login/Login';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Home from './components/Home/Home';
+import ModalList from './components/Modal/ModalList';
 
 function App() {
 
   return (
-    <main>
-      <Header />
-      {/* <Login /> */}
-      <Dashboard />
-    </main>
+    <Router>
+      <Switch>
+        <Route exact path='/'>
+          <Home/>
+        </Route>
+        <Route path='/home'>
+          <Home/>
+        </Route>
+        <Route path='/modal/:id'>
+          <ModalList/>
+        </Route>
+
+
+      </Switch>
+    </Router>
   );
 }
 
