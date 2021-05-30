@@ -5,24 +5,21 @@ import {
   Route
 } from "react-router-dom";
 import Home from './components/Home/Home';
-import ModalList from './components/Modal/ModalList';
+
 
 function App() {
 
   return (
     <Router>
       <Switch>
+
         <Route exact path='/'>
           <Home/>
         </Route>
         <Route path='/home'>
           <Home/>
         </Route>
-        <Route path='/modal/:id'>
-          <ModalList/>
-        </Route>
-
-
+    
       </Switch>
     </Router>
   );
