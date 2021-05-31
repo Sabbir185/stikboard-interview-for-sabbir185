@@ -5,23 +5,30 @@ import {
   Route
 } from "react-router-dom";
 import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import { createContext, useState } from 'react';
 
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState([])
 
   return (
-    <Router>
-      <Switch>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <Switch>
 
-        <Route exact path='/'>
-          <Home/>
-        </Route>
-        <Route path='/home'>
-          <Home/>
-        </Route>
-    
-      </Switch>
-    </Router>
+          <PrivateRoute exact path='/'>
+            <Home />
+          </PrivateRoute>
+          <Route path='/login'>
+            <Login />
+          </Route>
+
+        </Switch>
+      </Router>
+    </UserContext.Provider>
   );
 }
 
