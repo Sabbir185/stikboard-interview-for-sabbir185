@@ -12,7 +12,7 @@ const SignUp = () => {
     let { from } = location.state || { from: { pathname: "/" } };
 
     const onSubmit = data => {
-        const url = `http://localhost:5000/signUpInfo`;
+        const url = `https://fierce-beyond-01094.herokuapp.com/signUpInfo`;
         fetch(url,{
             method:'POST',
             headers:{'content-type':'application/json'},

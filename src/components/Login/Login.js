@@ -16,7 +16,7 @@ const Login = () => {
     let { from } = location.state || { from: { pathname: "/" } };
 
     const onSubmit = data => {
-        fetch(`http://localhost:5000/login?email=${data.email}`)
+        fetch(`https://fierce-beyond-01094.herokuapp.com/login?email=${data.email}`)
             .then(res => res.json())
             .then(json => {
                 json.map(m => {
