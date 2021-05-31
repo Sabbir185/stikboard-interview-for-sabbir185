@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React  from 'react';
 import { useForm } from "react-hook-form";
-import { Redirect, useHistory, useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 import './Login.css'
 
-const SignUp = ({toggle}) => {
+const SignUp = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
 
