@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import './LaunchList.css'
-import ModalList from '../Modal/ModalList';
+import ModalList from '../ModalList/ModalList';
 
 const customStyles = {
     content: {
