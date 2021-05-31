@@ -5,3 +5,8 @@
 .table-header {
     background-color: #F4F5F7;
 }
+
+.spinner {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
