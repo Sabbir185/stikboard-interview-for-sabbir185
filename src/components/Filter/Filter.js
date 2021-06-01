@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useContext } from 'react';
 import Modal from 'react-modal';
+import { UserContext } from '../../App';
 import ModalCalendar from '../ModalCalendar/ModalCalendar';
 
 const customStyles = {
@@ -18,6 +18,7 @@ Modal.setAppElement('#root')
 
 const Filter = () => {
     const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     function openModal() {
         setIsOpen(true);
@@ -27,8 +28,15 @@ const Filter = () => {
         setIsOpen(false);
     }
 
+    const handleLoggedOut = () => {
+        setLoggedInUser(loggedInUser.password="")
+    }
+
     return (
-        <section className="mt-5">
+        <section className="mt-3">
+            <div className="pb-2">
+                <button onClick={handleLoggedOut} className="btn btn-info d-block ml-auto">logout</button>
+            </div>
             <div className="d-flex justify-content-between">
                 <div className="w-25">
                     <select className="form-control" onClick={openModal}>
